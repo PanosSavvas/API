@@ -1,0 +1,88 @@
+
+
+POST /auth/register
+POST /auth/login
+
+GET /jobs
+GET /jobs/{id}
+POST /jobs/{id}/join
+POST /jobs/{id}/complete
+POST /jobs/{id}/cancel
+
+
+Job
+
+id
+description
+image / thumbnail
+start date
+end date
+join date
+employer id
+market segment
+age group
+gender
+geography
+tasks 
+website
+
+Task
+
+type
+job_id
+task meta: json
+
+User
+
+first name
+last name
+email
+nickname
+date of birth
+gender
+location
+phone
+facebook
+
+UserJobs
+
+id
+user_id
+job_id
+join_date
+complete_date
+status: NOT STARTED, STARTED, SUBMITTED, PAID
+completion_status: COMPLETE, INCOMPLETE
+
+JobSubmissions
+
+userjob_id
+submission: object (json)
+timestamp
+
+Device
+
+user_id
+
+Events
+
+registered
+searchForJobs
+viewJob
+joinJob
+completeJob
+shareOnFacebook 
+
+Employer
+ 
+name
+description
+website
+image
+
+
+
+
+
+
+
