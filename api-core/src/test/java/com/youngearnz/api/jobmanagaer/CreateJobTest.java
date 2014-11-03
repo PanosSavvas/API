@@ -1,4 +1,4 @@
-package com.youngearnz.api.registration;
+package com.youngearnz.api.jobmanagaer;
 
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
