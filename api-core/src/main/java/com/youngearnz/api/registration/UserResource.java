@@ -1,4 +1,4 @@
-package com.youngearnz.api.core;
+package com.youngearnz.api.registration;
 
 /**
  * Created by can on 26/10/14.

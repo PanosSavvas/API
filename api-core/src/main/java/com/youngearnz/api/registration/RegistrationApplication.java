@@ -1,4 +1,4 @@
-package com.youngearnz.api.core;
+package com.youngearnz.api.registration;
 
 /**
  * Created by can on 26/10/14.
@@ -10,15 +10,15 @@ import io.dropwizard.setup.Environment;
 
 import java.net.UnknownHostException;
 
-public class APIApplication extends Application<APIConfiguration> {
+public class RegistrationApplication extends Application<RegistrationConfiguration> {
 
     MongoClient client;
-    public APIApplication() throws UnknownHostException {
+    public RegistrationApplication() throws UnknownHostException {
         client = new MongoClient("localhost");
     }
 
     public static void main(String[] args) throws Exception {
-        new APIApplication().run(args);
+        new RegistrationApplication().run(args);
     }
 
     @Override
@@ -27,12 +27,12 @@ public class APIApplication extends Application<APIConfiguration> {
     }
 
     @Override
-    public void initialize(Bootstrap<APIConfiguration> bootstrap) {
+    public void initialize(Bootstrap<RegistrationConfiguration> bootstrap) {
 
     }
 
     @Override
-    public void run(APIConfiguration configuration,
+    public void run(RegistrationConfiguration configuration,
                     Environment environment) {
 
         final UserResource resource = new UserResource(client.getDB("ye"));

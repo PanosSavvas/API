@@ -1,11 +1,14 @@
-package com.youngearnz.api.core;
+package com.youngearnz.api.registration;
 
 import org.joda.time.DateTime;
 
 /**
  * Created by can on 26/10/14.
  */
-public class RegistrationRequest {
+public class User {
+
+    private String id;
+    private DateTime registrationDate;
     private String firstName;
     private String lastName;
     private String nickName;
@@ -17,6 +20,22 @@ public class RegistrationRequest {
     private String address;
     private String phone;
     private String facebook;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public DateTime getRegistrationDate() {
+        return registrationDate;
+    }
+
+    public void setRegistrationDate(DateTime registrationDate) {
+        this.registrationDate = registrationDate;
+    }
 
     public String getFirstName() {
         return firstName;

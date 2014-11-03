@@ -1,4 +1,4 @@
-package com.youngearnz.api.core;
+package com.youngearnz.api.registration;
 
 import org.joda.time.DateTime;
 
