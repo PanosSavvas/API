@@ -10,10 +10,9 @@ import com.mongodb.*;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
-@Path("/user")
+@Path("/User")
 @Produces(MediaType.APPLICATION_JSON)
 public class UserResource {
-
 
     private DB db;
 
@@ -23,6 +22,7 @@ public class UserResource {
 
     @POST
     @Timed
+    @Path("/Register")
     public RegistrationResponse register(RegistrationRequest registrationRequest) {
         DBCollection users = db.getCollection("users");
         DBObject object = new BasicDBObject()
@@ -37,6 +37,7 @@ public class UserResource {
     }
 
     @POST
+    @Path("/Authenticate")
     public AuthenticationResponse authenticate(AuthenticationRequest authenticationRequest) {
         DBCursor result =
                 db.getCollection("users").find(new BasicDBObject("_id", authenticationRequest.getId()));
