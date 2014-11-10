@@ -7,6 +7,7 @@ import com.mongodb.MongoClient;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import org.eclipse.jetty.server.Connector;
 
 import java.net.UnknownHostException;
 
@@ -22,11 +23,6 @@ public class JobManagerApplication extends Application<JobManagerConfiguration> 
     }
 
     @Override
-    public String getName() {
-        return "hello-world";
-    }
-
-    @Override
     public void initialize(Bootstrap<JobManagerConfiguration> bootstrap) {
 
     }
@@ -34,6 +30,7 @@ public class JobManagerApplication extends Application<JobManagerConfiguration> 
     @Override
     public void run(JobManagerConfiguration configuration,
                     Environment environment) {
+
 
         //final UserResource resource = new UserResource(client.getDB("ye"));
         //environment.jersey().register(resource);

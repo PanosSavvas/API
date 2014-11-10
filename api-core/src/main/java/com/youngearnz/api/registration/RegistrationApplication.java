@@ -22,11 +22,6 @@ public class RegistrationApplication extends Application<RegistrationConfigurati
     }
 
     @Override
-    public String getName() {
-        return "hello-world";
-    }
-
-    @Override
     public void initialize(Bootstrap<RegistrationConfiguration> bootstrap) {
 
     }
